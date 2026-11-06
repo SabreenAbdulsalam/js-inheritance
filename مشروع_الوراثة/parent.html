@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>مختبر الوراثة البرمجية - الأب</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app-container">
+    <header>
+        <div class="logo-section">
+            <div class="logo-icon">&lt;/&gt;</div>
+            <div class="logo-text"><h1>Inheritance Lab</h1><p>مختبر الوراثة البرمجية</p></div>
+        </div>
+        <div class="js-badge">JavaScript <span class="js-icon">JS</span></div>
+    </header>
+
+    <nav class="tabs">
+        <a href="parent.html" class="tab active">👨🏻‍💼 الأب</a>
+        <a href="child.html" class="tab">👦🏻 الابن</a>
+        <a href="grandchild.html" class="tab">🧒🏻 الحفيد</a>
+    </nav>
+
+    <main class="main-card">
+        <div class="card-top">
+            
+            <!-- 1. شجرة الوراثة (أصبحت أولاً لتظهر في اليمين) -->
+            <div class="inheritance-tree">
+                <div class="tree-title">شجرة الوراثة</div>
+                <!-- حولنا الشجرة إلى روابط (a) لتصبح قابلة للضغط -->
+                <a href="parent.html" class="tree-node active"><div class="tree-avatar"><img src="images/parent.png" alt="الأب"></div><div class="tree-text"><h4>الأب</h4><p>Parent</p></div></a>
+                <div class="tree-arrow">↓</div>
+                <a href="child.html" class="tree-node"><div class="tree-avatar"><img src="images/child.png" alt="الابن"></div><div class="tree-text"><h4>الابن</h4><p>Child</p></div></a>
+                <div class="tree-arrow">↓</div>
+                <a href="grandchild.html" class="tree-node"><div class="tree-avatar"><img src="images/grandchild.png" alt="الحفيد"></div><div class="tree-text"><h4>الحفيد</h4><p>Grandchild</p></div></a>
+            </div>
+
+            <!-- 2. البطاقة التعريفية للأب (أصبحت ثانياً لتظهر في اليسار) -->
+            <div class="character-info">
+                <div class="generation-badge">الجيل الأول</div>
+                <h2 class="character-title">الأب</h2>
+                <p class="character-desc">الكلاس الأساسي (Parent) الذي يحتوي<br>على الخصائص المشتركة.</p>
+                <div class="avatar-large"><img src="images/parent.png" alt="الأب"></div>
+                <div class="info-pills">
+                    <div class="info-pill"><span class="info-icon-blue">👤</span><div><div style="font-size: 12px; color: var(--text-light);">العمر</div>45 سنة</div></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="card-bottom">
+            <div class="code-section">
+                <div class="section-header-purple"><span>{ }</span> الكلاس الأساسي</div>
+                <div class="code-content">
+                    <span style="color: #6b21a8;">class</span> Parent {<br>
+                    &nbsp;&nbsp;constructor(name, age) {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #3b82f6;">this</span>.name = name;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #3b82f6;">this</span>.age = age;<br>
+                    &nbsp;&nbsp;}<br>
+                    }
+                </div>
+                <div class="code-note">هذا هو الكلاس الأساسي الذي ستورث منه الأجيال القادمة.</div>
+            </div>
+            <div class="props-section">
+                <div class="section-header-blue"><span>⚙️</span> الخصائص الأساسية</div>
+                <div class="props-content">
+                    <div class="prop-box green">
+                        خصائص الكلاس الأب:
+                        <ul class="prop-list"><li>✔️ الاسم</li><li>✔️ العمر</li></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div></div>
+        <a href="child.html" class="btn-solid">التالي: جيل الابن ←</a>
+    </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

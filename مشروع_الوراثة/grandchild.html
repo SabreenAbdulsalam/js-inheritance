@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>مختبر الوراثة البرمجية - الحفيد</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app-container">
+    <header>
+        <div class="logo-section">
+            <div class="logo-icon">&lt;/&gt;</div>
+            <div class="logo-text"><h1>Inheritance Lab</h1><p>مختبر الوراثة البرمجية</p></div>
+        </div>
+        <div class="js-badge">JavaScript <span class="js-icon">JS</span></div>
+    </header>
+
+    <nav class="tabs">
+        <a href="parent.html" class="tab">👨🏻‍💼 الأب</a>
+        <a href="child.html" class="tab">👦🏻 الابن</a>
+        <a href="grandchild.html" class="tab active">🧒🏻 الحفيد</a>
+    </nav>
+
+    <main class="main-card">
+        <div class="card-top">
+            
+            <div class="inheritance-tree">
+                <div class="tree-title">شجرة الوراثة</div>
+                <a href="parent.html" class="tree-node"><div class="tree-avatar"><img src="images/parent.png" alt="الأب"></div><div class="tree-text"><h4>الأب</h4><p>Parent</p></div></a>
+                <div class="tree-arrow">↓</div>
+                <a href="child.html" class="tree-node"><div class="tree-avatar"><img src="images/child.png" alt="الابن"></div><div class="tree-text"><h4>الابن</h4><p>Child</p></div></a>
+                <div class="tree-arrow">↓</div>
+                <a href="grandchild.html" class="tree-node active"><div class="tree-avatar"><img src="images/grandchild.png" alt="الحفيد"></div><div class="tree-text"><h4>الحفيد</h4><p>Grandchild</p></div></a>
+            </div>
+
+            <div class="character-info">
+                <div class="generation-badge">الجيل الثالث</div>
+                <h2 class="character-title">الحفيد</h2>
+                <p class="character-desc">يرث من الابن، وبالتالي يرث أيضًا<br>ما ورثه الابن من الأب.</p>
+                <div class="avatar-large"><img src="images/grandchild.png" alt="الحفيد"></div>
+                <div class="info-pills">
+                    <div class="info-pill"><span class="info-icon-purple">★</span><div><div style="font-size: 12px; color: var(--text-light);">الهواية</div>البرمجة</div></div>
+                    <div class="info-pill"><span class="info-icon-blue">👤</span><div><div style="font-size: 12px; color: var(--text-light);">العمر</div>5 سنوات</div></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="card-bottom">
+            <div class="code-section">
+                <div class="section-header-purple"><span>{ }</span> تطبيق الوراثة في الكود</div>
+                <div class="code-content">
+                    <span style="color: #6b21a8;">class</span> Grandchild <span style="color: #6b21a8;">extends</span> Child {<br>
+                    &nbsp;&nbsp;constructor(name, age, hobby) {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #3b82f6;">super</span>(name, age);<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #3b82f6;">this</span>.hobby = hobby;<br>
+                    &nbsp;&nbsp;}<br>
+                    }
+                </div>
+                <div class="code-note">استخدمنا كلمة <strong>extends</strong> ليرث الحفيد من الابن.</div>
+            </div>
+            <div class="props-section">
+                <div class="section-header-blue"><span>⚙️</span> الخصائص الموروثة والجديدة</div>
+                <div class="props-content">
+                    <div class="prop-box purple">+ خاصية جديدة:<ul class="prop-list"><li>✔️ الهواية</li></ul></div>
+                    <div class="prop-box green">+ من الابن والأب:<ul class="prop-list"><li>✔️ الاسم</li><li>✔️ العمر</li></ul></div>
+                </div>
+            </div>
+        </div>
+    </main>
+<footer>
+        <div style="display: flex; gap: 10px;">
+            <a href="parent.html" class="btn-outline">→ الرجوع للأب</a>
+            <a href="child.html" class="btn-outline">→ الرجوع للابن</a>
+        </div>
+        <button class="btn-solid" onclick="alert('ألف مبروك! اكتمل تسلسل الوراثة بنجاح.')">اكتمل تسلسل الأجيال ✔️</button>
+    </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
